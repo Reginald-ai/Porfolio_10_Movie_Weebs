@@ -1,5 +1,5 @@
 <template>
-  <div class="aside-navbar">
+  <div class="aside-navbar col-md-2">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a href="#" class="nav-link"
@@ -37,6 +37,8 @@ export default {};
   // top: 105px;
   // left: 0px;
   // bottom: 0;
+  display: block;
+
   .navbar-nav {
     padding: 1rem 1rem;
     .nav-item {

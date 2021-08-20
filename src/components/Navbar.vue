@@ -13,7 +13,7 @@
           <img src="../assets/img/emojione-v1_movie-camera.svg" alt="" />
         </div>
         <div class="search">
-          <input type="text" />
+          <input v-model="search" type="text" />
           <button>
             <span
               ><img src="../assets/img/bi_arrow-right-circle.svg" alt=""
@@ -31,7 +31,13 @@ export default {
   data() {
     return {
       isActive: false,
+      search: "",
     };
+  },
+  watch: {
+    search() {
+      this.$store.dispatch("search", this.search);
+    },
   },
   methods: {
     btnAnimate() {

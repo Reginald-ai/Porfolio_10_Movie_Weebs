@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Navbar />
-    <section>
+    <section class="row">
       <NavbarSide />
       <MovieList />
     </section>

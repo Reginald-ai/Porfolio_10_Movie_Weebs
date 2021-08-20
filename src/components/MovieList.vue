@@ -1,16 +1,18 @@
 <template>
-  <div class="movies-container">
-    <h1>Movies</h1>
-    <ul>
-      <li v-for="(movie, index) in movies" :key="movie.id">
-        index:{{ index }} {{ movie.name }}
-      </li>
-    </ul>
+  <div class="movies-container col-md-9">
+    <div class="row">
+      <Movie v-for="movie in movies" :key="movie.id" :movie="movie" />
+    </div>
   </div>
 </template>
 
 <script>
+import Movie from "./Movie.vue";
 export default {
+  components: {
+    Movie,
+  },
+
   data() {
     return {};
   },
@@ -25,7 +27,6 @@ export default {
 
 <style>
 .movies-container {
-  padding: 40px;
   color: #fff;
 }
 </style>
